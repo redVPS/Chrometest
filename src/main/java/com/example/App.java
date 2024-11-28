@@ -25,7 +25,7 @@ public class App {
         }
     }
 
-    private static boolean isChromeInstalled(String path) {
+    private boolean isChromeInstalled(String path) {
         return new java.io.File(path).exists();
     }
 
