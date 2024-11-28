@@ -19,8 +19,17 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
-         java-version: '11'
-         distribution: 'adoptopenjdk'  # You can change this to 'zulu', 'temurin', or another distribution.
+       java-version: '11'
+       distribution: 'temurin'  # Use 'temurin' instead of 'adoptopenjdk'
+       java-package: jdk
+       architecture: x64
+       check-latest: false
+       server-id: github
+       server-username: GITHUB_ACTOR
+       server-password: GITHUB_TOKEN
+       overwrite-settings: true
+       job-status: success
+
 
 
     - name: Cache Maven dependencies
