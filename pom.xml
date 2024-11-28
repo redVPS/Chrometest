@@ -65,8 +65,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <testng>
-        <testngSuiteFile>src/test/resources/testng.xml</testngSuiteFile>
-    </testng>
 </project>
