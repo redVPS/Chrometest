@@ -25,20 +25,13 @@ public class App {
         }
     }
 
-    // Static method to check if Chrome is installed
-    private static boolean isChromeInstalled(String path) {
+    // Updated method to be public and static
+    public static boolean isChromeInstalled(String path) {
         return new java.io.File(path).exists();
     }
 
-    // Static method to open URL in Chrome
     private static void openInChrome(String url) throws IOException {
-        String chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-        // Launch Chrome with the URL if installed
-        if (isChromeInstalled(chromePath)) {
-            Runtime.getRuntime().exec(new String[]{chromePath, url});
-        } else {
-            // Fall back to the default browser if Chrome is not found
-            Desktop.getDesktop().browse(URI.create(url));
-        }
+        // Open the URL in Chrome
+        Desktop.getDesktop().browse(URI.create(url));
     }
 }
