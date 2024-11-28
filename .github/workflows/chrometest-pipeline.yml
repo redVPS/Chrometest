@@ -19,7 +19,9 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
+         java-version: '11'
+         distribution: 'adoptopenjdk'  # You can change this to 'zulu', 'temurin', or another distribution.
+
 
     - name: Cache Maven dependencies
       uses: actions/cache@v2
